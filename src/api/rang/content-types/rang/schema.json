@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rangs",
+  "info": {
+    "singularName": "rang",
+    "pluralName": "rangs",
+    "displayName": "rang"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kek": {
+      "type": "integer"
+    }
+  }
+}
