@@ -27,23 +27,24 @@ services:
 
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
-    ports:
-      - '1337:1337'
+#    ports:
+#      - '1337:1337'
     networks:
       - strapi_server
+      - proxy
     depends_on:
       - strapi_serverDB
-#    expose:
-#      - 1337
+    expose:
+      - 1337
     labels:
       - traefik.enable=true
-#      - traefik.docker.network=strapi_server
-#      - traefik.http.routers.strapi_server.entrypoints=websecure
+      - traefik.docker.network=proxy
+      - traefik.http.routers.strapi_server.entrypoints=websecure
       - traefik.http.routers.strapi_server.rule=Host(`www.api.epic-type.ru`,`api.epic-type.ru`)
       - traefik.http.routers.strapi_server.tls=true
       - traefik.http.routers.strapi_server.tls.certresolver=letsencrypt
-#      - traefik.http.routers.strapi_server.service=strapi_server_service
-#      - traefik.http.services.strapi_server_service.loadbalancer.server.port=80
+      - traefik.http.routers.strapi_server.service=strapi_server_service
+      - traefik.http.services.strapi_server_service.loadbalancer.server.port=1337
 
   strapi_serverDB:
     container_name: strapi_serverDB
@@ -85,3 +86,8 @@ networks:
   strapi_server:
     name: Strapi_server
     driver: bridge
+  proxy:
+    attachable: true
+#    internal: false
+    name: proxy
+    external: true
