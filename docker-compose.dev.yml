@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  strapi_server_dev:
+    container_name: strapi_server_dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: strapi_server_dev:latest
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: strapi_server_devDB
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PORT: ${DATABASE_PORT}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - ./config:/opt/app/config
+      - ./src:/opt/app/src
+      - ./package.json:/opt/package.json
+      - ./yarn.lock:/opt/yarn.lock
+
+      - ./.env:/opt/app/.env
+      - ./public/uploads:/opt/app/public/uploads
+    ports:
+      - '1337:1337'
+    networks:
+      - strapi_server_dev
+    depends_on:
+      - strapi_server_devDB
+
+  strapi_server_devDB:
+    container_name: strapi_server_devDB
+    platform: linux/amd64 #for platform error on Apple M1 chips
+    restart: unless-stopped
+    env_file: .env
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_USER: ${DATABASE_USERNAME}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE_NAME}
+    volumes:
+      - strapi_server_dev-data:/var/lib/mysql
+      #- ./data:/var/lib/postgresql/data/ # if you want to use a bind folder
+    ports:
+      - '3306:3306'
+    networks:
+      - strapi_server_dev
+
+  strapi_server_devAdminer:
+    container_name: strapi_server_devAdminer
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - '9090:8080'
+    environment:
+      - ADMINER_DEFAULT_SERVER=strapi_server_devDB
+    networks:
+      - strapi_server_dev
+    depends_on:
+      - strapi_server_devDB
+
+volumes:
+  strapi_server_dev-data:
+
+networks:
+  strapi_server_dev:
+    name: Strapi_server_dev
+    driver: bridge

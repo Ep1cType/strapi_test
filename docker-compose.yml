@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  strapi_server:
+    container_name: strapi_server
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: strapi_server:latest
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: strapi_serverDB
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PORT: ${DATABASE_PORT}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - ./config:/opt/app/config
+      - ./src:/opt/app/src
+      - ./package.json:/opt/package.json
+      - ./yarn.lock:/opt/yarn.lock
+
+      - ./.env:/opt/app/.env
+      - ./public/uploads:/opt/app/public/uploads
+#    ports:
+#      - '1337:1337'
+    networks:
+      - strapi_server
+    depends_on:
+      - strapi_serverDB
+    expose:
+      - 1337
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=strapi_server
+      - traefik.http.routers.strapi_server.entrypoints=websecure
+      - traefik.http.routers.strapi_server.rule=Host(`www.api.epic-type.ru`,`api.epic-type.ru`)
+      - traefik.http.routers.strapi_server.tls=true
+      - traefik.http.routers.strapi_server.tls.certresolver=letsencrypt
+      - traefik.http.routers.strapi_server.service=strapi_server_service
+      - traefik.http.services.strapi_server_service.loadbalancer.server.port=1337
+
+  strapi_serverDB:
+    container_name: strapi_serverDB
+    platform: linux/amd64 #for platform error on Apple M1 chips
+    restart: unless-stopped
+    env_file: .env
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_USER: ${DATABASE_USERNAME}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE_NAME}
+    volumes:
+      - strapi_server-data:/var/lib/mysql
+      #- ./data:/var/lib/postgresql/data/ # if you want to use a bind folder
+    ports:
+      - '3306:3306'
+    networks:
+      - strapi_server
+
+  strapi_serverAdminer:
+    container_name: strapi_serverAdminer
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - '9090:8080'
+    environment:
+      - ADMINER_DEFAULT_SERVER=strapi_serverDB
+    networks:
+      - strapi_server
+    depends_on:
+      - strapi_serverDB
+
+volumes:
+  strapi_server-data:
+
+networks:
+  strapi_server:
+    name: Strapi_server
+    driver: bridge
