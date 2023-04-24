@@ -26,16 +26,47 @@
       "required": true
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "star": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "type": "enumeration",
+      "enum": [
+        "four",
+        "five"
+      ],
+      "required": true
+    },
+    "element": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "fire",
+        "ice",
+        "lightning",
+        "wind",
+        "physical",
+        "quantum",
+        "imaginary"
+      ],
       "required": true
     }
   }
