@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_char_info_char_infos",
+  "info": {
+    "displayName": "Char Info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sex": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "main_skill": {
+      "type": "component",
+      "repeatable": true,
+      "component": "skills.main-skill"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "story": {
+      "type": "richtext"
+    }
+  }
+}
