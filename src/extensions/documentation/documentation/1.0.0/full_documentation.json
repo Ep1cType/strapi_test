@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-05-02T19:16:23.412Z"
+    "x-generation-date": "2023-05-02T21:40:20.614Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -11539,6 +11539,87 @@
           }
         }
       },
+      "TierListLocalizationRequest": {
+        "required": [
+          "locale"
+        ],
+        "type": "object",
+        "properties": {
+          "s": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "a": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "b": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "c": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "d": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "locale": {
+            "type": "string"
+          }
+        }
+      },
       "TierListRequest": {
         "type": "object",
         "required": [
@@ -11618,8 +11699,2429 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "locale": {
+                "type": "string"
               }
             }
+          }
+        }
+      },
+      "TierListLocalizationResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "s": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "icon": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "alternativeText": {
+                                      "type": "string"
+                                    },
+                                    "caption": {
+                                      "type": "string"
+                                    },
+                                    "width": {
+                                      "type": "integer"
+                                    },
+                                    "height": {
+                                      "type": "integer"
+                                    },
+                                    "formats": {},
+                                    "hash": {
+                                      "type": "string"
+                                    },
+                                    "ext": {
+                                      "type": "string"
+                                    },
+                                    "mime": {
+                                      "type": "string"
+                                    },
+                                    "size": {
+                                      "type": "number",
+                                      "format": "float"
+                                    },
+                                    "url": {
+                                      "type": "string"
+                                    },
+                                    "previewUrl": {
+                                      "type": "string"
+                                    },
+                                    "provider": {
+                                      "type": "string"
+                                    },
+                                    "provider_metadata": {},
+                                    "related": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "folder": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {
+                                                "name": {
+                                                  "type": "string"
+                                                },
+                                                "pathId": {
+                                                  "type": "integer"
+                                                },
+                                                "parent": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "children": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "array",
+                                                      "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "files": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "array",
+                                                      "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "name": {
+                                                                "type": "string"
+                                                              },
+                                                              "alternativeText": {
+                                                                "type": "string"
+                                                              },
+                                                              "caption": {
+                                                                "type": "string"
+                                                              },
+                                                              "width": {
+                                                                "type": "integer"
+                                                              },
+                                                              "height": {
+                                                                "type": "integer"
+                                                              },
+                                                              "formats": {},
+                                                              "hash": {
+                                                                "type": "string"
+                                                              },
+                                                              "ext": {
+                                                                "type": "string"
+                                                              },
+                                                              "mime": {
+                                                                "type": "string"
+                                                              },
+                                                              "size": {
+                                                                "type": "number",
+                                                                "format": "float"
+                                                              },
+                                                              "url": {
+                                                                "type": "string"
+                                                              },
+                                                              "previewUrl": {
+                                                                "type": "string"
+                                                              },
+                                                              "provider": {
+                                                                "type": "string"
+                                                              },
+                                                              "provider_metadata": {},
+                                                              "related": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "id": {
+                                                                          "type": "number"
+                                                                        },
+                                                                        "attributes": {
+                                                                          "type": "object",
+                                                                          "properties": {}
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "folder": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "folderPath": {
+                                                                "type": "string"
+                                                              },
+                                                              "createdAt": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "updatedAt": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "createdBy": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "firstname": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "lastname": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "username": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "email": {
+                                                                            "type": "string",
+                                                                            "format": "email"
+                                                                          },
+                                                                          "resetPasswordToken": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "registrationToken": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "isActive": {
+                                                                            "type": "boolean"
+                                                                          },
+                                                                          "roles": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "data": {
+                                                                                "type": "array",
+                                                                                "items": {
+                                                                                  "type": "object",
+                                                                                  "properties": {
+                                                                                    "id": {
+                                                                                      "type": "number"
+                                                                                    },
+                                                                                    "attributes": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "name": {
+                                                                                          "type": "string"
+                                                                                        },
+                                                                                        "code": {
+                                                                                          "type": "string"
+                                                                                        },
+                                                                                        "description": {
+                                                                                          "type": "string"
+                                                                                        },
+                                                                                        "users": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "data": {
+                                                                                              "type": "array",
+                                                                                              "items": {
+                                                                                                "type": "object",
+                                                                                                "properties": {
+                                                                                                  "id": {
+                                                                                                    "type": "number"
+                                                                                                  },
+                                                                                                  "attributes": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {}
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        "permissions": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "data": {
+                                                                                              "type": "array",
+                                                                                              "items": {
+                                                                                                "type": "object",
+                                                                                                "properties": {
+                                                                                                  "id": {
+                                                                                                    "type": "number"
+                                                                                                  },
+                                                                                                  "attributes": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "action": {
+                                                                                                        "type": "string"
+                                                                                                      },
+                                                                                                      "subject": {
+                                                                                                        "type": "string"
+                                                                                                      },
+                                                                                                      "properties": {},
+                                                                                                      "conditions": {},
+                                                                                                      "role": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {
+                                                                                                          "data": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {
+                                                                                                              "id": {
+                                                                                                                "type": "number"
+                                                                                                              },
+                                                                                                              "attributes": {
+                                                                                                                "type": "object",
+                                                                                                                "properties": {}
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      },
+                                                                                                      "createdAt": {
+                                                                                                        "type": "string",
+                                                                                                        "format": "date-time"
+                                                                                                      },
+                                                                                                      "updatedAt": {
+                                                                                                        "type": "string",
+                                                                                                        "format": "date-time"
+                                                                                                      },
+                                                                                                      "createdBy": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {
+                                                                                                          "data": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {
+                                                                                                              "id": {
+                                                                                                                "type": "number"
+                                                                                                              },
+                                                                                                              "attributes": {
+                                                                                                                "type": "object",
+                                                                                                                "properties": {}
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      },
+                                                                                                      "updatedBy": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {
+                                                                                                          "data": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {
+                                                                                                              "id": {
+                                                                                                                "type": "number"
+                                                                                                              },
+                                                                                                              "attributes": {
+                                                                                                                "type": "object",
+                                                                                                                "properties": {}
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        "createdAt": {
+                                                                                          "type": "string",
+                                                                                          "format": "date-time"
+                                                                                        },
+                                                                                        "updatedAt": {
+                                                                                          "type": "string",
+                                                                                          "format": "date-time"
+                                                                                        },
+                                                                                        "createdBy": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "data": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "id": {
+                                                                                                  "type": "number"
+                                                                                                },
+                                                                                                "attributes": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {}
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        "updatedBy": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "data": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "id": {
+                                                                                                  "type": "number"
+                                                                                                },
+                                                                                                "attributes": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {}
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          "blocked": {
+                                                                            "type": "boolean"
+                                                                          },
+                                                                          "preferedLanguage": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "createdAt": {
+                                                                            "type": "string",
+                                                                            "format": "date-time"
+                                                                          },
+                                                                          "updatedAt": {
+                                                                            "type": "string",
+                                                                            "format": "date-time"
+                                                                          },
+                                                                          "createdBy": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "data": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "id": {
+                                                                                    "type": "number"
+                                                                                  },
+                                                                                  "attributes": {
+                                                                                    "type": "object",
+                                                                                    "properties": {}
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          "updatedBy": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "data": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "id": {
+                                                                                    "type": "number"
+                                                                                  },
+                                                                                  "attributes": {
+                                                                                    "type": "object",
+                                                                                    "properties": {}
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "updatedBy": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "path": {
+                                                  "type": "string"
+                                                },
+                                                "createdAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "updatedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "createdBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "updatedBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "folderPath": {
+                                      "type": "string"
+                                    },
+                                    "createdAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "createdBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "updatedBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "star": {
+                          "type": "string",
+                          "enum": [
+                            "four",
+                            "five"
+                          ]
+                        },
+                        "element": {
+                          "type": "string",
+                          "enum": [
+                            "fire",
+                            "ice",
+                            "lightning",
+                            "wind",
+                            "physical",
+                            "quantum",
+                            "imaginary"
+                          ]
+                        },
+                        "info": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "sex": {
+                              "type": "string",
+                              "enum": [
+                                "male",
+                                "female"
+                              ]
+                            },
+                            "main_skill": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "description": {},
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "type": {
+                                    "type": "string"
+                                  },
+                                  "icon": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "number"
+                                          },
+                                          "attributes": {
+                                            "type": "object",
+                                            "properties": {
+                                              "name": {
+                                                "type": "string"
+                                              },
+                                              "alternativeText": {
+                                                "type": "string"
+                                              },
+                                              "caption": {
+                                                "type": "string"
+                                              },
+                                              "width": {
+                                                "type": "integer"
+                                              },
+                                              "height": {
+                                                "type": "integer"
+                                              },
+                                              "formats": {},
+                                              "hash": {
+                                                "type": "string"
+                                              },
+                                              "ext": {
+                                                "type": "string"
+                                              },
+                                              "mime": {
+                                                "type": "string"
+                                              },
+                                              "size": {
+                                                "type": "number",
+                                                "format": "float"
+                                              },
+                                              "url": {
+                                                "type": "string"
+                                              },
+                                              "previewUrl": {
+                                                "type": "string"
+                                              },
+                                              "provider": {
+                                                "type": "string"
+                                              },
+                                              "provider_metadata": {},
+                                              "related": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "data": {
+                                                    "type": "array",
+                                                    "items": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "folder": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "data": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "id": {
+                                                        "type": "number"
+                                                      },
+                                                      "attributes": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "name": {
+                                                            "type": "string"
+                                                          },
+                                                          "pathId": {
+                                                            "type": "integer"
+                                                          },
+                                                          "parent": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "number"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {}
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "children": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "array",
+                                                                "items": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "number"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {}
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "files": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "array",
+                                                                "items": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "number"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "name": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "alternativeText": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "caption": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "width": {
+                                                                          "type": "integer"
+                                                                        },
+                                                                        "height": {
+                                                                          "type": "integer"
+                                                                        },
+                                                                        "formats": {},
+                                                                        "hash": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "ext": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "mime": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "size": {
+                                                                          "type": "number",
+                                                                          "format": "float"
+                                                                        },
+                                                                        "url": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "previewUrl": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "provider": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "provider_metadata": {},
+                                                                        "related": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "data": {
+                                                                              "type": "array",
+                                                                              "items": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "id": {
+                                                                                    "type": "number"
+                                                                                  },
+                                                                                  "attributes": {
+                                                                                    "type": "object",
+                                                                                    "properties": {}
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "folder": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "data": {
+                                                                              "type": "object",
+                                                                              "properties": {
+                                                                                "id": {
+                                                                                  "type": "number"
+                                                                                },
+                                                                                "attributes": {
+                                                                                  "type": "object",
+                                                                                  "properties": {}
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "folderPath": {
+                                                                          "type": "string"
+                                                                        },
+                                                                        "createdAt": {
+                                                                          "type": "string",
+                                                                          "format": "date-time"
+                                                                        },
+                                                                        "updatedAt": {
+                                                                          "type": "string",
+                                                                          "format": "date-time"
+                                                                        },
+                                                                        "createdBy": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "data": {
+                                                                              "type": "object",
+                                                                              "properties": {
+                                                                                "id": {
+                                                                                  "type": "number"
+                                                                                },
+                                                                                "attributes": {
+                                                                                  "type": "object",
+                                                                                  "properties": {
+                                                                                    "firstname": {
+                                                                                      "type": "string"
+                                                                                    },
+                                                                                    "lastname": {
+                                                                                      "type": "string"
+                                                                                    },
+                                                                                    "username": {
+                                                                                      "type": "string"
+                                                                                    },
+                                                                                    "email": {
+                                                                                      "type": "string",
+                                                                                      "format": "email"
+                                                                                    },
+                                                                                    "resetPasswordToken": {
+                                                                                      "type": "string"
+                                                                                    },
+                                                                                    "registrationToken": {
+                                                                                      "type": "string"
+                                                                                    },
+                                                                                    "isActive": {
+                                                                                      "type": "boolean"
+                                                                                    },
+                                                                                    "roles": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "data": {
+                                                                                          "type": "array",
+                                                                                          "items": {
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                              "id": {
+                                                                                                "type": "number"
+                                                                                              },
+                                                                                              "attributes": {
+                                                                                                "type": "object",
+                                                                                                "properties": {
+                                                                                                  "name": {
+                                                                                                    "type": "string"
+                                                                                                  },
+                                                                                                  "code": {
+                                                                                                    "type": "string"
+                                                                                                  },
+                                                                                                  "description": {
+                                                                                                    "type": "string"
+                                                                                                  },
+                                                                                                  "users": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "data": {
+                                                                                                        "type": "array",
+                                                                                                        "items": {
+                                                                                                          "type": "object",
+                                                                                                          "properties": {
+                                                                                                            "id": {
+                                                                                                              "type": "number"
+                                                                                                            },
+                                                                                                            "attributes": {
+                                                                                                              "type": "object",
+                                                                                                              "properties": {}
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  },
+                                                                                                  "permissions": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "data": {
+                                                                                                        "type": "array",
+                                                                                                        "items": {
+                                                                                                          "type": "object",
+                                                                                                          "properties": {
+                                                                                                            "id": {
+                                                                                                              "type": "number"
+                                                                                                            },
+                                                                                                            "attributes": {
+                                                                                                              "type": "object",
+                                                                                                              "properties": {
+                                                                                                                "action": {
+                                                                                                                  "type": "string"
+                                                                                                                },
+                                                                                                                "subject": {
+                                                                                                                  "type": "string"
+                                                                                                                },
+                                                                                                                "properties": {},
+                                                                                                                "conditions": {},
+                                                                                                                "role": {
+                                                                                                                  "type": "object",
+                                                                                                                  "properties": {
+                                                                                                                    "data": {
+                                                                                                                      "type": "object",
+                                                                                                                      "properties": {
+                                                                                                                        "id": {
+                                                                                                                          "type": "number"
+                                                                                                                        },
+                                                                                                                        "attributes": {
+                                                                                                                          "type": "object",
+                                                                                                                          "properties": {}
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "createdAt": {
+                                                                                                                  "type": "string",
+                                                                                                                  "format": "date-time"
+                                                                                                                },
+                                                                                                                "updatedAt": {
+                                                                                                                  "type": "string",
+                                                                                                                  "format": "date-time"
+                                                                                                                },
+                                                                                                                "createdBy": {
+                                                                                                                  "type": "object",
+                                                                                                                  "properties": {
+                                                                                                                    "data": {
+                                                                                                                      "type": "object",
+                                                                                                                      "properties": {
+                                                                                                                        "id": {
+                                                                                                                          "type": "number"
+                                                                                                                        },
+                                                                                                                        "attributes": {
+                                                                                                                          "type": "object",
+                                                                                                                          "properties": {}
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "updatedBy": {
+                                                                                                                  "type": "object",
+                                                                                                                  "properties": {
+                                                                                                                    "data": {
+                                                                                                                      "type": "object",
+                                                                                                                      "properties": {
+                                                                                                                        "id": {
+                                                                                                                          "type": "number"
+                                                                                                                        },
+                                                                                                                        "attributes": {
+                                                                                                                          "type": "object",
+                                                                                                                          "properties": {}
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  },
+                                                                                                  "createdAt": {
+                                                                                                    "type": "string",
+                                                                                                    "format": "date-time"
+                                                                                                  },
+                                                                                                  "updatedAt": {
+                                                                                                    "type": "string",
+                                                                                                    "format": "date-time"
+                                                                                                  },
+                                                                                                  "createdBy": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "data": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {
+                                                                                                          "id": {
+                                                                                                            "type": "number"
+                                                                                                          },
+                                                                                                          "attributes": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {}
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  },
+                                                                                                  "updatedBy": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "data": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {
+                                                                                                          "id": {
+                                                                                                            "type": "number"
+                                                                                                          },
+                                                                                                          "attributes": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {}
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "blocked": {
+                                                                                      "type": "boolean"
+                                                                                    },
+                                                                                    "preferedLanguage": {
+                                                                                      "type": "string"
+                                                                                    },
+                                                                                    "createdAt": {
+                                                                                      "type": "string",
+                                                                                      "format": "date-time"
+                                                                                    },
+                                                                                    "updatedAt": {
+                                                                                      "type": "string",
+                                                                                      "format": "date-time"
+                                                                                    },
+                                                                                    "createdBy": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "data": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "id": {
+                                                                                              "type": "number"
+                                                                                            },
+                                                                                            "attributes": {
+                                                                                              "type": "object",
+                                                                                              "properties": {}
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "updatedBy": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "data": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "id": {
+                                                                                              "type": "number"
+                                                                                            },
+                                                                                            "attributes": {
+                                                                                              "type": "object",
+                                                                                              "properties": {}
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "updatedBy": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "data": {
+                                                                              "type": "object",
+                                                                              "properties": {
+                                                                                "id": {
+                                                                                  "type": "number"
+                                                                                },
+                                                                                "attributes": {
+                                                                                  "type": "object",
+                                                                                  "properties": {}
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "path": {
+                                                            "type": "string"
+                                                          },
+                                                          "createdAt": {
+                                                            "type": "string",
+                                                            "format": "date-time"
+                                                          },
+                                                          "updatedAt": {
+                                                            "type": "string",
+                                                            "format": "date-time"
+                                                          },
+                                                          "createdBy": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "number"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {}
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "updatedBy": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "data": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "number"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {}
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "folderPath": {
+                                                "type": "string"
+                                              },
+                                              "createdAt": {
+                                                "type": "string",
+                                                "format": "date-time"
+                                              },
+                                              "updatedAt": {
+                                                "type": "string",
+                                                "format": "date-time"
+                                              },
+                                              "createdBy": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "data": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "id": {
+                                                        "type": "number"
+                                                      },
+                                                      "attributes": {
+                                                        "type": "object",
+                                                        "properties": {}
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "updatedBy": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "data": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "id": {
+                                                        "type": "number"
+                                                      },
+                                                      "attributes": {
+                                                        "type": "object",
+                                                        "properties": {}
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "text_color": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "image": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {
+                                        "name": {
+                                          "type": "string"
+                                        },
+                                        "alternativeText": {
+                                          "type": "string"
+                                        },
+                                        "caption": {
+                                          "type": "string"
+                                        },
+                                        "width": {
+                                          "type": "integer"
+                                        },
+                                        "height": {
+                                          "type": "integer"
+                                        },
+                                        "formats": {},
+                                        "hash": {
+                                          "type": "string"
+                                        },
+                                        "ext": {
+                                          "type": "string"
+                                        },
+                                        "mime": {
+                                          "type": "string"
+                                        },
+                                        "size": {
+                                          "type": "number",
+                                          "format": "float"
+                                        },
+                                        "url": {
+                                          "type": "string"
+                                        },
+                                        "previewUrl": {
+                                          "type": "string"
+                                        },
+                                        "provider": {
+                                          "type": "string"
+                                        },
+                                        "provider_metadata": {},
+                                        "related": {
+                                          "type": "object",
+                                          "properties": {
+                                            "data": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "id": {
+                                                    "type": "number"
+                                                  },
+                                                  "attributes": {
+                                                    "type": "object",
+                                                    "properties": {}
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "folder": {
+                                          "type": "object",
+                                          "properties": {
+                                            "data": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "number"
+                                                },
+                                                "attributes": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "name": {
+                                                      "type": "string"
+                                                    },
+                                                    "pathId": {
+                                                      "type": "integer"
+                                                    },
+                                                    "parent": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "children": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "id": {
+                                                                "type": "number"
+                                                              },
+                                                              "attributes": {
+                                                                "type": "object",
+                                                                "properties": {}
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "files": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "id": {
+                                                                "type": "number"
+                                                              },
+                                                              "attributes": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "name": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "alternativeText": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "caption": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "width": {
+                                                                    "type": "integer"
+                                                                  },
+                                                                  "height": {
+                                                                    "type": "integer"
+                                                                  },
+                                                                  "formats": {},
+                                                                  "hash": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "ext": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "mime": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "size": {
+                                                                    "type": "number",
+                                                                    "format": "float"
+                                                                  },
+                                                                  "url": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "previewUrl": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "provider": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "provider_metadata": {},
+                                                                  "related": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "data": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "number"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "folder": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "data": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "id": {
+                                                                            "type": "number"
+                                                                          },
+                                                                          "attributes": {
+                                                                            "type": "object",
+                                                                            "properties": {}
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "folderPath": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "createdAt": {
+                                                                    "type": "string",
+                                                                    "format": "date-time"
+                                                                  },
+                                                                  "updatedAt": {
+                                                                    "type": "string",
+                                                                    "format": "date-time"
+                                                                  },
+                                                                  "createdBy": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "data": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "id": {
+                                                                            "type": "number"
+                                                                          },
+                                                                          "attributes": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "firstname": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "lastname": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "username": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "email": {
+                                                                                "type": "string",
+                                                                                "format": "email"
+                                                                              },
+                                                                              "resetPasswordToken": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "registrationToken": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "isActive": {
+                                                                                "type": "boolean"
+                                                                              },
+                                                                              "roles": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "data": {
+                                                                                    "type": "array",
+                                                                                    "items": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "id": {
+                                                                                          "type": "number"
+                                                                                        },
+                                                                                        "attributes": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "name": {
+                                                                                              "type": "string"
+                                                                                            },
+                                                                                            "code": {
+                                                                                              "type": "string"
+                                                                                            },
+                                                                                            "description": {
+                                                                                              "type": "string"
+                                                                                            },
+                                                                                            "users": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "data": {
+                                                                                                  "type": "array",
+                                                                                                  "items": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "id": {
+                                                                                                        "type": "number"
+                                                                                                      },
+                                                                                                      "attributes": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {}
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            },
+                                                                                            "permissions": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "data": {
+                                                                                                  "type": "array",
+                                                                                                  "items": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "id": {
+                                                                                                        "type": "number"
+                                                                                                      },
+                                                                                                      "attributes": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {
+                                                                                                          "action": {
+                                                                                                            "type": "string"
+                                                                                                          },
+                                                                                                          "subject": {
+                                                                                                            "type": "string"
+                                                                                                          },
+                                                                                                          "properties": {},
+                                                                                                          "conditions": {},
+                                                                                                          "role": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {
+                                                                                                              "data": {
+                                                                                                                "type": "object",
+                                                                                                                "properties": {
+                                                                                                                  "id": {
+                                                                                                                    "type": "number"
+                                                                                                                  },
+                                                                                                                  "attributes": {
+                                                                                                                    "type": "object",
+                                                                                                                    "properties": {}
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          },
+                                                                                                          "createdAt": {
+                                                                                                            "type": "string",
+                                                                                                            "format": "date-time"
+                                                                                                          },
+                                                                                                          "updatedAt": {
+                                                                                                            "type": "string",
+                                                                                                            "format": "date-time"
+                                                                                                          },
+                                                                                                          "createdBy": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {
+                                                                                                              "data": {
+                                                                                                                "type": "object",
+                                                                                                                "properties": {
+                                                                                                                  "id": {
+                                                                                                                    "type": "number"
+                                                                                                                  },
+                                                                                                                  "attributes": {
+                                                                                                                    "type": "object",
+                                                                                                                    "properties": {}
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          },
+                                                                                                          "updatedBy": {
+                                                                                                            "type": "object",
+                                                                                                            "properties": {
+                                                                                                              "data": {
+                                                                                                                "type": "object",
+                                                                                                                "properties": {
+                                                                                                                  "id": {
+                                                                                                                    "type": "number"
+                                                                                                                  },
+                                                                                                                  "attributes": {
+                                                                                                                    "type": "object",
+                                                                                                                    "properties": {}
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            },
+                                                                                            "createdAt": {
+                                                                                              "type": "string",
+                                                                                              "format": "date-time"
+                                                                                            },
+                                                                                            "updatedAt": {
+                                                                                              "type": "string",
+                                                                                              "format": "date-time"
+                                                                                            },
+                                                                                            "createdBy": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "data": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {
+                                                                                                    "id": {
+                                                                                                      "type": "number"
+                                                                                                    },
+                                                                                                    "attributes": {
+                                                                                                      "type": "object",
+                                                                                                      "properties": {}
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            },
+                                                                                            "updatedBy": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "data": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {
+                                                                                                    "id": {
+                                                                                                      "type": "number"
+                                                                                                    },
+                                                                                                    "attributes": {
+                                                                                                      "type": "object",
+                                                                                                      "properties": {}
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "blocked": {
+                                                                                "type": "boolean"
+                                                                              },
+                                                                              "preferedLanguage": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "createdAt": {
+                                                                                "type": "string",
+                                                                                "format": "date-time"
+                                                                              },
+                                                                              "updatedAt": {
+                                                                                "type": "string",
+                                                                                "format": "date-time"
+                                                                              },
+                                                                              "createdBy": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "data": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                      "id": {
+                                                                                        "type": "number"
+                                                                                      },
+                                                                                      "attributes": {
+                                                                                        "type": "object",
+                                                                                        "properties": {}
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "updatedBy": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "data": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                      "id": {
+                                                                                        "type": "number"
+                                                                                      },
+                                                                                      "attributes": {
+                                                                                        "type": "object",
+                                                                                        "properties": {}
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "updatedBy": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "data": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "id": {
+                                                                            "type": "number"
+                                                                          },
+                                                                          "attributes": {
+                                                                            "type": "object",
+                                                                            "properties": {}
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "path": {
+                                                      "type": "string"
+                                                    },
+                                                    "createdAt": {
+                                                      "type": "string",
+                                                      "format": "date-time"
+                                                    },
+                                                    "updatedAt": {
+                                                      "type": "string",
+                                                      "format": "date-time"
+                                                    },
+                                                    "createdBy": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "updatedBy": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "data": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "folderPath": {
+                                          "type": "string"
+                                        },
+                                        "createdAt": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
+                                        "updatedAt": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
+                                        "createdBy": {
+                                          "type": "object",
+                                          "properties": {
+                                            "data": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "number"
+                                                },
+                                                "attributes": {
+                                                  "type": "object",
+                                                  "properties": {}
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "updatedBy": {
+                                          "type": "object",
+                                          "properties": {
+                                            "data": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "number"
+                                                },
+                                                "attributes": {
+                                                  "type": "object",
+                                                  "properties": {}
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "story": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "s": {
+                          "type": "integer"
+                        },
+                        "a": {
+                          "type": "integer"
+                        },
+                        "b": {
+                          "type": "integer"
+                        },
+                        "c": {
+                          "type": "integer"
+                        },
+                        "d": {
+                          "type": "integer"
+                        },
+                        "e": {
+                          "type": "integer"
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "publishedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "createdBy": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "firstname": {
+                                      "type": "string"
+                                    },
+                                    "lastname": {
+                                      "type": "string"
+                                    },
+                                    "username": {
+                                      "type": "string"
+                                    },
+                                    "email": {
+                                      "type": "string",
+                                      "format": "email"
+                                    },
+                                    "resetPasswordToken": {
+                                      "type": "string"
+                                    },
+                                    "registrationToken": {
+                                      "type": "string"
+                                    },
+                                    "isActive": {
+                                      "type": "boolean"
+                                    },
+                                    "roles": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "name": {
+                                                    "type": "string"
+                                                  },
+                                                  "code": {
+                                                    "type": "string"
+                                                  },
+                                                  "description": {
+                                                    "type": "string"
+                                                  },
+                                                  "users": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "permissions": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "action": {
+                                                                  "type": "string"
+                                                                },
+                                                                "subject": {
+                                                                  "type": "string"
+                                                                },
+                                                                "properties": {},
+                                                                "conditions": {},
+                                                                "role": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "data": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "id": {
+                                                                          "type": "number"
+                                                                        },
+                                                                        "attributes": {
+                                                                          "type": "object",
+                                                                          "properties": {}
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                },
+                                                                "createdAt": {
+                                                                  "type": "string",
+                                                                  "format": "date-time"
+                                                                },
+                                                                "updatedAt": {
+                                                                  "type": "string",
+                                                                  "format": "date-time"
+                                                                },
+                                                                "createdBy": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "data": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "id": {
+                                                                          "type": "number"
+                                                                        },
+                                                                        "attributes": {
+                                                                          "type": "object",
+                                                                          "properties": {}
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                },
+                                                                "updatedBy": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "data": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "id": {
+                                                                          "type": "number"
+                                                                        },
+                                                                        "attributes": {
+                                                                          "type": "object",
+                                                                          "properties": {}
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "createdAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "updatedAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "createdBy": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "updatedBy": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "blocked": {
+                                      "type": "boolean"
+                                    },
+                                    "preferedLanguage": {
+                                      "type": "string"
+                                    },
+                                    "createdAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "createdBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "updatedBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "updatedBy": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "localizations": {
+                          "type": "object",
+                          "properties": {
+                            "data": {
+                              "type": "array",
+                              "items": {}
+                            }
+                          }
+                        },
+                        "locale": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "b": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "c": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "d": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          },
+          "updatedBy": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          },
+          "localizations": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {}
+              }
+            }
+          },
+          "locale": {
+            "type": "string"
           }
         }
       },
@@ -14029,6 +16531,20 @@
                     }
                   }
                 }
+              },
+              "localizations": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/TierListListResponseDataItemLocalized"
+                    }
+                  }
+                }
+              },
+              "locale": {
+                "type": "string"
               }
             }
           }
@@ -16440,6 +18956,18 @@
                     }
                   }
                 }
+              },
+              "localizations": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "array",
+                    "items": {}
+                  }
+                }
+              },
+              "locale": {
+                "type": "string"
               }
             }
           }
@@ -18884,6 +21412,20 @@
                     }
                   }
                 }
+              },
+              "localizations": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/TierListResponseDataObjectLocalized"
+                    }
+                  }
+                }
+              },
+              "locale": {
+                "type": "string"
               }
             }
           }
@@ -21295,6 +23837,18 @@
                     }
                   }
                 }
+              },
+              "localizations": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "array",
+                    "items": {}
+                  }
+                }
+              },
+              "locale": {
+                "type": "string"
               }
             }
           }
@@ -36119,6 +38673,87 @@
         ],
         "parameters": [],
         "operationId": "delete/tier-list"
+      }
+    },
+    "/tier-list/localizations": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TierListLocalizationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tier-list"
+        ],
+        "parameters": [],
+        "operationId": "post/tier-list/localizations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TierListLocalizationRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/upload/files": {

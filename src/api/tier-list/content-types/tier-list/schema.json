@@ -4,12 +4,17 @@
   "info": {
     "singularName": "tier-list",
     "pluralName": "tier-lists",
-    "displayName": "tier-list"
+    "displayName": "tier-list",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "s": {
       "type": "relation",
