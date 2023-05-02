@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "tier_lists",
+  "info": {
+    "singularName": "tier-list",
+    "pluralName": "tier-lists",
+    "displayName": "tier-list"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    },
+    "a": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    },
+    "b": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    },
+    "c": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    },
+    "d": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    }
+  }
+}

@@ -78,6 +78,65 @@
         }
       },
       "component": "char-info.char-info"
+    },
+    "s": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "private": true,
+      "default": 0
+    },
+    "a": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "private": true
+    },
+    "b": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "private": true,
+      "default": 0
+    },
+    "c": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "private": true,
+      "default": 0
+    },
+    "d": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "default": 0,
+      "private": true
+    },
+    "e": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "private": true,
+      "default": 0
     }
   }
 }
