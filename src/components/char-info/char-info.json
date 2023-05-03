@@ -31,6 +31,13 @@
     },
     "story": {
       "type": "richtext"
+    },
+    "meta_img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
