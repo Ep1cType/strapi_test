@@ -40,7 +40,7 @@ services:
       - traefik.enable=true
       - traefik.docker.network=proxy
       - traefik.http.routers.strapi_server.entrypoints=websecure
-      - traefik.http.routers.strapi_server.rule=Host(`www.api.epic-type.ru`,`api.epic-type.ru`)
+      - traefik.http.routers.strapi_server.rule=Host(`api.pom-pom.pro`)
       - traefik.http.routers.strapi_server.tls=true
       - traefik.http.routers.strapi_server.tls.certresolver=letsencrypt
       - traefik.http.routers.strapi_server.service=strapi_server_service
