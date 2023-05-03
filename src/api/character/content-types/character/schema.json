@@ -137,6 +137,24 @@
       "type": "integer",
       "private": true,
       "default": 0
+    },
+    "path": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "abundance",
+        "destruction",
+        "erudition",
+        "harmony",
+        "hunt",
+        "nihility",
+        "preservation"
+      ],
+      "default": "abundance"
     }
   }
 }
