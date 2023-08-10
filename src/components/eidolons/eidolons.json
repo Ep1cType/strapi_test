@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_eidolons_eidolons",
+  "info": {
+    "displayName": "Eidolons"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "json",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
